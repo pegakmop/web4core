@@ -827,7 +827,7 @@ function buildSingBoxInbounds(opts) {
     const inbounds = [];
     if (opts.addTun) {
         const specs = parseTunSpec(opts.tunName || '');
-        const ifaces = specs.length ? specs.map(x => x.name) : ['singtun0'];
+        const ifaces = specs.length ? specs.map(x => x.name) : ['opkgtun0'];
         for (let i = 0; i < ifaces.length; i++) {
             const name = ifaces[i];
             const tag = ifaces.length > 1 ? `tun-in-${name}` : 'tun-in';
